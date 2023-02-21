@@ -130,3 +130,9 @@ def print_report(pipe):
     print("accuracy: {:0.3f}".format(metrics.accuracy_score(y_test, y_pred)))
 ```
 
+Visuaiztion
+```
+!pip install eli5
+import eli5
+eli5.show_weights(pipe, top=(10,10), target_names= class_names)
+```
