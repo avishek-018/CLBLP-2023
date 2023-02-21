@@ -103,6 +103,21 @@ data['cleaned'] = data['TEXT'].apply(remove_punctuation)
 
 ```
 
+Data Split
+```
+corpus, labels = data.cleaned, data.training_label
+X_train, X_test, y_train, y_test = train_test_split(corpus,labels,train_size = 0.8, test_size = 0.2,random_state =0)
+
+from sklearn.pipeline import Pipeline, make_pipeline
+```
+
+```
+clf = TfidfVectorizer(ngram_range=(1,1), min_df=1, tokenizer=lambda x: x.split(), use_idf=True)
+vec = LogisticRegressionCV()
+pipe = make_pipeline(clf, vec)
+pipe.fit(X_train, y_train)
+```
+
 Result printing
 ```
 def print_report(pipe):
