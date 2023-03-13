@@ -4,4 +4,4 @@ Find all the notebooks in the notebooks folder
 
 # Courtesy
 
-<img src="authors.jpg" width=800 height=300>
+<img src="authors.jpg" width=850 height=170>
